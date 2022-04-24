@@ -1,0 +1,49 @@
+@use '../../../styles/typography' as t;
+@use '../../../styles/variables' as v;
+@use '../../../styles/mixins' as m;
+
+$item-bg: #f3f3f3;
+
+.user-item {
+  box-sizing: border-box;
+  width: 100%;
+  background-color: $item-bg;
+  border-radius: 8px;
+  padding: 10px;
+
+  @include m.mb-up(xs) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @include m.mb-up(sm) {
+    max-width: 420px;
+  }
+
+  &__info {
+    font-size: t.$fz-text;
+
+    @include m.mb-down(xs) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__info-item:not(:last-child) {
+    margin-bottom: 7px;
+  }
+
+  &__info-heading {
+    color: t.$tc-second;
+  }
+
+  &__link {
+    font-size: t.$fz-title;
+    align-self: flex-end;
+    color: v.$c-accent;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

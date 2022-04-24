@@ -1,0 +1,9 @@
+@use '../../../styles/variables' as v;
+@use '../../../styles/typography' as t;
+@use '../../../styles/mixins' as m;
+
+.users-count {
+  margin-top: 10px;
+  font-size: t.$fz-title;
+  text-align: right;
+}
