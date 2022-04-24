@@ -5,6 +5,7 @@ import './Users.scss';
 import type { User } from '../../../types/types';
 import List from '../../../common/List/List';
 import UserItem from '../UserItem/UserItem';
+import Spinner from '../../../common/Spinner/Spinner';
 import { loadingStates } from '../../../api';
 
 type UsersProps = {
@@ -15,6 +16,9 @@ type UsersProps = {
 function Users({ users, state }: UsersProps) {
   if (state === loadingStates.failed) {
     return <p>Не удалось загрузить пользователей</p>;
+  }
+  if (state === loadingStates.loading) {
+    return <Spinner />;
   }
 
   return (
