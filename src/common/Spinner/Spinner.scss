@@ -1,0 +1,24 @@
+.spinner {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  vertical-align: -0.125em;
+  border: 0.25em solid currentColor;
+  border-right-color: currentcolor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: 0.75s linear infinite spinner;
+
+  &_sm {
+    width: 1em;
+    height: 1em;
+    border-width: 0.2em;
+  }
+}
+
+@keyframes spinner {
+  100% {
+    transform: rotate(360deg);
+  }
+}
