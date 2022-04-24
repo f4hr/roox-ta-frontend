@@ -32,3 +32,9 @@ export const getUsers = async <Response>() => {
 
   return users;
 };
+
+export const getUser = async <Response>(userId: string) => {
+  const user: Response = await client.get(routes.apiUserPath(userId));
+
+  return user;
+};
