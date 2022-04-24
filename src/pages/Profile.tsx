@@ -4,6 +4,7 @@ import { block } from 'bem-cn';
 import PageLayout from '../common/PageLayout';
 import Header from '../common/Header/Header';
 import UserForm from '../features/profile/UserForm/UserForm';
+import FormReadonlyButton from '../features/profile/FormReadonlyButton/FormReadonlyButton';
 
 function Profile() {
   useEffect(() => {
@@ -13,6 +14,7 @@ function Profile() {
   const header = (
     <Header>
       <h1 className={block('page-title')()}>Профиль пользователя</h1>
+      <FormReadonlyButton />
     </Header>
   );
 
