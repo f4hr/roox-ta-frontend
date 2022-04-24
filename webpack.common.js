@@ -29,7 +29,9 @@ module.exports = {
     ],
   },
   plugins: [
-    new Dotenv(),
+    new Dotenv({
+      systemvars: true,
+    }),
     new HtmlWebpackPlugin({
       title: 'App',
       filename: 'index.html',
