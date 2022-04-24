@@ -1,0 +1,38 @@
+@use '../../styles/typography' as t;
+@use '../../styles/variables' as v;
+
+.btn-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn {
+  padding: 5px 15px;
+  font-size: t.$fz-title;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+
+  &_main,
+  &_success {
+    color: t.$tc-main-inv;
+  }
+
+  &_main {
+    background-color: v.$c-accent;
+  }
+
+  &_main:hover,
+  &_main.is-active {
+    background-color: #3a3fb9;
+  }
+
+  &_success {
+    background-color: v.$c-success;
+  }
+
+  &:disabled {
+    background-color: v.$c-disabled;
+    cursor: default;
+  }
+}
