@@ -1,0 +1,16 @@
+parser: '@typescript-eslint/parser'
+parserOptions:
+  ecmaVersion: 2018
+  project: './tsconfig.json'
+extends:
+  - airbnb
+  - airbnb-typescript
+  - prettier
+plugins:
+  - '@typescript-eslint'
+  - prettier
+rules:
+  prettier/prettier: error
+  react/button-has-type: off
+  no-param-reassign: ['error', { 'props': true, 'ignorePropertyModificationsFor': ['state'] }]
+  import/no-extraneous-dependencies: ['error', { 'devDependencies': ['webpack.*.js'] }]

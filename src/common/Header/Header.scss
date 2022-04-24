@@ -1,0 +1,12 @@
+@use '../../styles/typography' as t;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.page-title {
+  font-size: t.$fz-heading;
+}

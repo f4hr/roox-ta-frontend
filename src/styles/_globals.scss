@@ -1,0 +1,52 @@
+@use './typography' as t;
+@use './variables' as v;
+@use './mixins' as m;
+
+html,
+body {
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-family: t.$ff-main;
+  font-size: t.$fz-main;
+  line-height: 1.2;
+}
+
+.visually-hidden,
+.visually-hidden-focusable:not(:focus):not(:focus-within) {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+button {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.app {
+  min-height: 100vh;
+
+  @include m.mb-up(sm) {
+    display: flex;
+  }
+}
+
+.content {
+  flex-grow: 1;
+
+  @include m.mb-down(sm) {
+    padding: 20px;
+  }
+
+  @include m.mb-up(sm) {
+    padding: 20px 35px;
+  }
+}

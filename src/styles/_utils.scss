@@ -1,0 +1,20 @@
+// s=start, t=top, e=end, b=bottom
+$margin-sides: (
+  s: left,
+  t: top,
+  e: right,
+  b: bottom,
+);
+$margin-values: (
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 1rem,
+);
+
+@each $margin-side-name, $margin-side-value in $margin-sides {
+  @each $margin-value-name, $margin-value in $margin-values {
+    .m#{$margin-side-name}-#{$margin-value-name} {
+      margin-#{$margin-side-value}: #{$margin-value} !important;
+    }
+  }
+}

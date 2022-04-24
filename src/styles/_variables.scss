@@ -1,0 +1,28 @@
+$c-accent: #4b51ef;
+$c-danger: #d91313;
+$c-success: #52cf4f;
+$c-disabled: #afafaf;
+
+$bgc-main: #fff;
+$bgc-second: #bdbdbd;
+
+$bc-main: #d8d8d8;
+$bc-second: #f3f3f3;
+
+$breakpoints-up: (
+  xs: 480px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+$breakpoints-down: (
+  xs: 479.98px,
+  sm: 575.98px,
+  md: 767.98px,
+  lg: 991.98px,
+  xl: 1199.98px,
+  xxl: 1399.98px,
+);

@@ -1,0 +1,24 @@
+@use '../../styles/variables' as v;
+@use '../../styles/typography' as t;
+@use '../../styles/mixins' as m;
+
+.sidebar {
+  box-sizing: border-box;
+  width: 100%;
+  background-color: v.$bgc-second;
+
+  @include m.mb-down(sm) {
+    padding: 20px 20px 10px;
+  }
+
+  @include m.mb-up(sm) {
+    flex-shrink: 0;
+    max-width: 150px;
+    padding: 35px 20px;
+  }
+}
+
+.sidebar__heading {
+  font-size: t.$fz-title;
+  margin-bottom: 10px;
+}

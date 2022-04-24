@@ -1,0 +1,17 @@
+@use './variables' as v;
+
+@mixin mb-up($breakpoint) {
+  $value: map-get(v.$breakpoints-up, $breakpoint);
+
+  @media (min-width: $value) {
+    @content;
+  }
+}
+
+@mixin mb-down($breakpoint) {
+  $value: map-get(v.$breakpoints-down, $breakpoint);
+
+  @media (max-width: $value) {
+    @content;
+  }
+}
