@@ -1,0 +1,18 @@
+@use '../../../styles/mixins' as m;
+
+.filter__item {
+  @include m.mb-down(sm) {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+  }
+
+  @include m.mb-up(sm) {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}
