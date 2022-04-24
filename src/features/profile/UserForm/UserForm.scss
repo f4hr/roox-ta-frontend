@@ -1,0 +1,24 @@
+@use '../../../styles/variables' as v;
+
+.user-form {
+  max-width: 32rem;
+}
+
+.form__input-list {
+  margin-bottom: 10px;
+  padding: 20px 12px;
+  border: 1px solid v.$bc-second;
+  border-radius: 8px;
+}
+
+.form__input-item {
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.form__label {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 10px;
+}

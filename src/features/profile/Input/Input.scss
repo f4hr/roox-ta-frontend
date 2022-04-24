@@ -1,0 +1,27 @@
+@use '../../../styles/variables' as v;
+@use '../../../styles/typography' as t;
+
+.input {
+  font-size: 10px;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  border: 1px solid v.$bc-main;
+  border-radius: 5px;
+
+  &.is-invalid:not(:read-only) {
+    border-color: v.$c-danger;
+  }
+
+  &:read-only {
+    color: rgba(t.$tc-main, 0.3);
+  }
+}
+
+input.input {
+  max-width: 210px;
+}
+
+textarea.input {
+  width: 100%;
+  min-height: 55px;
+}
